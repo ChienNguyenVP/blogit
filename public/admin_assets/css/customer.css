@@ -1,0 +1,28 @@
+table.table{
+	width: 100% !important;
+}
+
+div.cke_contents{
+	height: 500px !important;
+}
+
+div.bottom{
+	margin-bottom: 10px;
+}
+
+.icheck > label{
+	padding-left: 20px;
+}
+.modal-body img{
+	max-width: 100%;
+}
+
+/**
+ * bootstrap input
+ */
+.bootstrap-tagsinput{
+	width: 100%;
+}
+pre{
+	padding:0px;
+}
