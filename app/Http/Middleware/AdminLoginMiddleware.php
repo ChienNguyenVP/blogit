@@ -18,12 +18,7 @@ class AdminLoginMiddleware
     {
         // dd(Auth::check());
         if (Auth::check()) {
-            $user = Auth::user();
-            if($user->is_admin == 1){
-                return $next($request);
-            }else{
-                return redirect('/admin/login');
-            }
+            return $next($request);
         }
         return redirect('/admin/login');
     }

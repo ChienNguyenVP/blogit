@@ -200,6 +200,9 @@ return [
          */
         Yajra\DataTables\DataTablesServiceProvider::class,
 
+        Laravel\Socialite\SocialiteServiceProvider::class,
+        Laratrust\LaratrustServiceProvider::class,
+
 
     ],
 
@@ -260,6 +263,8 @@ return [
           * crawler
           */
          'Goutte' => Weidner\Goutte\GoutteFacade::class,
+         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+         'Laratrust'   => Laratrust\LaratrustFacade::class,
 
     ],
 

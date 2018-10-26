@@ -6,6 +6,7 @@ MAIN NAVIGATION</li>
   </a>
 </li>
 
+@if(\Laratrust::hasRole('admin'))
 <li class="header">QUẢN LÝ POSTS</li>
 <li class="nav-item {{ (Request::is('admin/posts*')) ? 'active open' : '' }}">
     <a href="{{ route('admin.posts.index') }}" class="nav-link ">
@@ -24,14 +25,12 @@ MAIN NAVIGATION</li>
         <i class="fa fa-tags" aria-hidden="true"></i> <span class="title">Tags</span>
     </a>
 </li>
-
 <li class="header">QUẢN LÝ USERS</li>
 <li class="nav-item {{ (Request::is('admin/users*')) ? 'active open' : '' }}">
     <a href="{{ route('admin.users.index') }}" class="nav-link ">
         <i class="fa fa-users" aria-hidden="true"></i> <span class="title">Users</span>
     </a>
 </li>
-
 <li class="header"><i class="fa fa-recycle" aria-hidden="true"></i>&nbsp;QUẢN LÝ RECYCLE BIN</li>
 <li class="nav-item {{ (Request::is('admin/recycle-bin/posts*')) ? 'active open' : '' }}">
     <a href="{{ route('admin.recycleBin.posts') }}" class="nav-link ">
@@ -48,3 +47,4 @@ MAIN NAVIGATION</li>
         <i class="fa fa-bitbucket" aria-hidden="true"></i> <span class="title">Tags Trash</span>
     </a>
 </li>
+@endif

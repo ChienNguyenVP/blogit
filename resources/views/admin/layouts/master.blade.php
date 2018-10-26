@@ -1,3 +1,4 @@
+{{-- {{ \Laratrust::hasRole('admin') }} --}}
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,7 +50,6 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
-
     <header class="main-header">
       <!-- Logo -->
       <a href="{{ route('admin.dashboard') }}" class="logo">
@@ -310,6 +310,7 @@
         </div>
       </nav>
     </header>
+   
     <!-- Left side column. contains the logo and sidebar -->
     <aside class="main-sidebar">
       <!-- sidebar: style can be found in sidebar.less -->

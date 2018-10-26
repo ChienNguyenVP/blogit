@@ -25,6 +25,10 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
+    a{
+      text-decoration: none;
+      color: white;
+    }
       .error {
          color:red;
          font-weight: normal;
@@ -60,15 +64,16 @@
           </div>
           <div class="row">
             <div class="col-xs-8">
-              <div class="checkbox icheck">
+              <div class="checkbox icheck" >
                 <label>
-                  <input type="checkbox" name="remember"> Remember Me
+                  <input style="opacity: 1" type="checkbox" name="remember"> Remember Me
                 </label>
               </div>
             </div>
             <!-- /.col -->
             <div class="col-xs-4">
-              <button type="submit" class="btn btn-primary btn-block btn-flat">Login</button>
+              <button type="submit" class="btn btn-primary btn-block btn-flat">Đăng nhập</button>
+              <button type="" class="btn btn-primary btn-block btn-flat"><a href="register">Đăng ký</a></button>
             </div><!-- /.col -->
           </div>
         </form>

@@ -12,6 +12,10 @@ Route::get('/contact', 'HomeController@contact')->name('contact');
  */
 Route::get('admin/login', 'Admin\Auth\LoginController@showLoginForm');
 Route::post('admin/login', 'Admin\Auth\LoginController@login');
+
+Route::get('admin/register', 'Admin\Auth\RegisterController@showRegistrationForm');
+Route::post('admin/register', 'Admin\Auth\RegisterController@register')->name('register');
+
 Route::get('admin/logout', 'Admin\Auth\LoginController@logout')->name('admin.logout');
 
 /**

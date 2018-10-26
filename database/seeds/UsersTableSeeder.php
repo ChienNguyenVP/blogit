@@ -12,16 +12,16 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
-            // 'name' => str_random(10),
-            'name'  => 'admin',
-            // 'email' => str_random(10).'@gmail.com',
-            'email' => 'chiennguyen@gmail.com',
-            'full_name' => 'Chiến Nguyễn',
-            'is_admin' => 1,
-            'avatar' => '/image/DSC02176.jpg',
-            'password' => bcrypt('123456')
-        ]);
+        // User::create([
+        //     // 'name' => str_random(10),
+        //     'name'  => 'admin',
+        //     // 'email' => str_random(10).'@gmail.com',
+        //     'email' => 'chiennguyen@gmail.com',
+        //     'full_name' => 'Chiến Nguyễn',
+        //     'is_admin' => 1,
+        //     'avatar' => '/image/DSC02176.jpg',
+        //     'password' => bcrypt('123456')
+        // ]);
 
         // User::create([
         //     'name'  => 'admin',

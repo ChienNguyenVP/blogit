@@ -63,5 +63,8 @@ class Kernel extends HttpKernel
          * count view
          */
         'filter.viewpost' => \App\Http\Middleware\FilterMiddleware::class,
+        'role' => \Laratrust\Middleware\LaratrustRole::class,
+        'permission' => \Laratrust\Middleware\LaratrustPermission::class,
+        'ability' => \Laratrust\Middleware\LaratrustAbility::class,
     ];
 }

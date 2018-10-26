@@ -19,7 +19,7 @@ class BlogInstall extends Command
      *
      * @var string
      */
-    protected $description = 'install blog Nguyen Manh';
+    protected $description = 'install blog ChienNguyen';
 
     /**
      * Create a new command instance.
