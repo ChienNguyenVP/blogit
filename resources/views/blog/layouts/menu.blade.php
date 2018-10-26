@@ -21,14 +21,11 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Học lập trình<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Laravel</a></li>
-                        <li><a href="#">C++</a></li>
-                        <li><a href="#">Python</a></li>
-                        <li><a href="#">Java</a></li>
                     </ul>
                 </li>
                 <li><a href="{{ route('blog.index')}}">Xem thêm</a></li>
                 <li><a href="{{ route('contact') }}">Liên hệ</a></li>
-                <li><a href="{{'admin'}}">Đăng nhập</a></li>
+                <li><a href="{{ asset('admin/login') }}">Đăng nhập</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <form class="navbar-form form-inline" id="form-search" action="{{ route('blog.search') }}" method="get">

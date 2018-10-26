@@ -49,8 +49,8 @@
           <input style="display:none">
           <input type="password" style="display:none">
           <div class="form-group has-feedback">
-            <input type="text" class="form-control" placeholder="name" name="name">
-            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            <input type="text" class="form-control" placeholder="Name" name="name">
+            <span class=" form-control-feedback"></span>
            {{--  @if($errors->has('password'))
                 <p class="error">{{ $errors->first('password') }}</p>
             @endif --}}
@@ -72,6 +72,7 @@
 
           <div class="form-group has-feedback">
               <input type="password" id="password-confirm" class="form-control" placeholder="Confirm Password" name="password_confirmation">
+              <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
           <div class="row">
             <!-- /.col -->

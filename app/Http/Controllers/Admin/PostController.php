@@ -28,7 +28,13 @@ class PostController extends Controller
      * @return json ( datatables )
      */
     public function jsonListPost(){
-        return Datatables::of(Post::query())
+        $posts=array();
+        if (Auth::user()->is_admin == 1) {
+            $posts = Post::all();
+        }else{
+         $posts = Post::where('user_id',Auth::user()->id)->get();
+        }
+        return Datatables::of($posts)
             ->addColumn('action', function ($post) {
                 return '       
                     <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#detail-post-'.$post->id.'"><i class="fa fa-eye" aria-hidden="true"></i></button>
@@ -57,8 +63,7 @@ class PostController extends Controller
                       <input type="hidden" name="_method" value="DELETE">
                       <input type="hidden" name="id" value="'.$post->id.'">
                       <button type="button" class="btn btn-xs btn-danger delete-post"><i class="glyphicon glyphicon-remove"></i></button>
-                    </form>
-                    ';
+                    </form>';
             })
             ->editColumn('is_featured', '{{ $is_featured == 1 ? "Đặc sắc" : "" }}' )
             ->editColumn('status', '{{ $status == 1 ? "public" : "private" }}' )
@@ -164,11 +169,11 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
+    {   
         $post = Post::where('id', $id)->with('tagged')->first();
         $post->untag();
         Post::where('id', $id)->delete();
-        
         return redirect()->back();
+
     }
 }

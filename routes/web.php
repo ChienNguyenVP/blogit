@@ -114,8 +114,16 @@ Route::prefix('admin')->middleware('admin.login')->group(function(){
 	 */
 	Route::get('users/json/list-user', 'Admin\UserController@jsonListUser')
 		->name('admin.users.json.listUser');
+	Route::get('users/json/list-users', 'Admin\UserController@jsonListUsers')
+		->name('admin.users.json.listUsers');
+	Route::get('userlist', 'Admin\UserController@list');
+	Route::delete('userlist/', 'Admin\UserController@list');
+	Route::get('profile/{id}','UserController@detail');				
+	Route::post('profile/id/{id}','UserController@store')->name('profile');				
 	Route::resource('users', 'Admin\UserController', ['names' => [
 		'index' => 'admin.users.index',
+		'edit'		=> 'admin.users.edit'
+
 	]]);
 });
 

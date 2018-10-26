@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Post;
 use App\Http\Requests\StoreBlogCategory;
+use Auth;
 
 class CategoryController extends Controller
 {
@@ -158,6 +159,7 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
+        dd(Auth::user()->id);
         if($id == 1){
             return redirect()->back()->withErrors();
         }

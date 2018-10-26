@@ -13,7 +13,7 @@
 					<!-- Content Header (Page header) -->
 					<div class="box-header with-border">
 						<h3 class="box-title">
-							<i class="fa fa fa-newspaper-o"></i> DUYỆT THÀNH VIÊN
+							<i class="fa fa fa-newspaper-o"></i> CỘNG TÁC VIÊN
 						</h3>
 					</div>
 					<div class="box-body">
@@ -50,7 +50,7 @@
 @section('footer')
 	<script type="text/javascript" src="{{ asset('admin_assets/js/datatables/jquery.dataTables.min.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('admin_assets/js/datatables/dataTables.bootstrap.min.js') }}"></script>
-
+	
 	<script type="text/javascript">
 	    $(function () {
 	    	// $('#posts-table').css('width', '100%');
@@ -59,7 +59,7 @@
 				serverSide: true,
 				responsive:true,
 				"ajax": {
-					url : '{!! route('admin.users.json.listUser') !!}',
+					url : '{!! route('admin.users.json.listUsers') !!}',
 				},
 				"columns": [
 					{ "data": "id"},

@@ -71,13 +71,15 @@
         <div class="small-box bg-red">
           <div class="inner">
             <h3>{{ $recycleBinPost }}</h3>
-
+  
             <p>Thùng rác</p>
           </div>
           <div class="icon">
           	<i class="fa fa-trash" aria-hidden="true"></i>
           </div>
-          <a href="{{ route('admin.recycleBin.posts') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          @if(\Laratrust::hasRole('admin'))
+          <a href="{{ route('admin.recycleBin.posts') }}" class="small-box-footer">Xem thêm<i class="fa fa-arrow-circle-right"></i></a>
+          @endif
         </div>
       </div>
       <!-- ./col -->

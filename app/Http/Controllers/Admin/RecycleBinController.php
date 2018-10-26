@@ -78,6 +78,9 @@ class RecycleBinController extends Controller
               </button>
             </form>
             ';
+             if(Auth::user()->id == $post->user_id || Auth::user()->is_admin == 1){
+                        return $add.$del;
+                    }
         })
         ->editColumn('is_featured', '{{ $is_featured == 1 ? "featured" : "" }}' )
         ->editColumn('status', '{{ $status == 1 ? "public" : "private" }}' )

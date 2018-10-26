@@ -73,7 +73,7 @@
 										<div class="box-body">
 											<div class="form-group">
 												<select class="form-control" id="sel1" name="status">
-													<option value="1" @if(old('status') != null ) {{ old('status') == 1 ? 'selected' : '' }} @endif>Publish</option>
+											@role('admin')	<option value="1" @if(old('status') != null ) {{ old('status') == 1 ? 'selected' : '' }} @endif>Publish</option> @endrole
 													<option value="0" @if(old('status') != null ) {{ old('status') == 0 ? 'selected' : '' }} @endif>Draft</option>
 												</select>
 											</div> 
