@@ -75,7 +75,7 @@
                         <div class="col-md-6">
                             <div class="copyrights">
                                 <p>
-                                    © Copyright 2017 | Designed by <a href="#" style="color:#f35045;">Chiến Nguyễn</a>
+                                    © Copyright 2018 | Designed by <a href="#" style="color:#f35045;">Chiến Nguyễn</a>
                                 </p>
                             </div>
                         </div>

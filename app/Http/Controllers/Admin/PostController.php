@@ -107,7 +107,7 @@ class PostController extends Controller
             $post->untag();
         }
 
-        return redirect(route('admin.posts.edit', $post->id) );
+        return redirect(route('admin.posts.edit', $post->id) )->with('success', 'Thêm bài viết thành công');
     }
 
     /**

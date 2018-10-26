@@ -159,10 +159,10 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        dd(Auth::user()->id);
-        if($id == 1){
-            return redirect()->back()->withErrors();
-        }
+        // Auth::user()->id;
+        // if($id == 1){
+        //     return redirect()->back()->withErrors();
+        // }
 
         Post::where('category_id', $id)->update(['category_id' => 1]);
         Category::where('parent_id', $id)->update(['parent_id' => null]);
